@@ -1,23 +1,2206 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
-{% block title %}{{ config.title }}{% if theme.index_with_subtitle and config.subtitle %} - {{config.subtitle }}{% endif %}{% endblock %}
 
-{% block page_class %}
-  {% if is_home() %}page-home{% endif -%}
-{% endblock %}
 
-{% block content %}
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Queel's blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="让我难以忘怀的光景，竟然是这样琐碎的小事">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Queel&#39;s blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Queel&#39;s blog">
+<meta property="og:description" content="让我难以忘怀的光景，竟然是这样琐碎的小事">
+<meta property="og:locale">
+<meta property="article:author" content="Queel">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>Queel's blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Queel's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/31/Try/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Queel's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/31/Try/" itemprop="url">Try</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-31T23:57:21+08:00">
+                2018-05-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                   字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                   分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>一直以来的想法，或者说是一个埋在心底的一个梦想</p>
+<p>最早的起源，应该是高中那篇XX是我美丽而又青涩的梦</p>
+<p>我现在敢于去做梦了</p>
+<p>未来要做的事情是使我的现实一天天靠近梦里编织的那个世界</p>
+<p>“这是我想做的事情，我会努力做到</p>
+<p>不论怎样”</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/30/MLlearning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Queel's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/30/MLlearning/" itemprop="url">机器学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-30T21:45:46+08:00">
+                2018-05-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                   字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                   分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="机器学习-Machine-Learning-周志华"><a href="#机器学习-Machine-Learning-周志华" class="headerlink" title="机器学习 Machine Learning 周志华"></a>机器学习 Machine Learning 周志华</h1><h2 id="第-1-章-绪论"><a href="#第-1-章-绪论" class="headerlink" title="第 1 章 绪论"></a>第 1 章 绪论</h2><h3 id="1-1-引言"><a href="#1-1-引言" class="headerlink" title="1.1 引言"></a>1.1 引言</h3><ul>
+<li>何为机器学习？</li>
+</ul>
+<p>研究如何通过计算的手段，利用系统经验来改善系统自身的性能。</p>
+<p>研究的主要内容是关于计算机上从数据中产生”模型“的算法，即”学习算法“</p>
+<p>更形式化的一个定义，用P来评估计算机程序在某任务类T上的性能，若一个程序通过利用经验E在T中任务上获得了性能改善，则我们就说关于T和P，该程序对E进行了学习。</p>
+<h3 id="1-2-基本术语"><a href="#1-2-基本术语" class="headerlink" title="1.2 基本术语"></a>1.2 基本术语</h3><ul>
+<li>数据集 data set 一组记录的集合</li>
+<li>示例 instance 或 样本 sample 每条记录是关于一个事件或对象的描述</li>
+<li>属性或特征 反映事件或对象在某方面的表现或性质的事项</li>
+<li>属性值</li>
+<li>属性空间 样本空间 或 “输入空间”</li>
+<li>维数</li>
+<li>学习/训练: 从数据中学得模型的过程</li>
+<li>训练数据：训练过程中用的数据</li>
+<li>训练样本：训练过程中使用的每个样本</li>
+<li>训练集：训练样本组成的集合</li>
+<li>假设 hypothesis：学得模型对应数据的某种潜在规律</li>
+<li>真实 ground-truth：潜在规律自身</li>
+<li>分类 classification：预测离散值的学习任务</li>
+<li>回归 regression：预测连续值的学习任务</li>
+<li>二分类 binary classification：正类 positive class 和 反类 negative class</li>
+<li>多分类任务 multi-class classification：涉及多个类别</li>
+<li>测试 testing：学得模型后使用模型对其进行预测</li>
+<li>测试样本：被预测的样本</li>
+<li>聚类 clustering：将训练集中的训练样本分成若干组，每组成为一个簇 cluster</li>
+<li>监督学习 supervised learning：分类和回归是它的代表</li>
+<li>无监督学习：训练数据无标记信息，聚类是它的代表</li>
+<li>泛化能力 generalization：学得模型适用于新样本的能力</li>
+</ul>
+<h3 id="1-3-假设空间"><a href="#1-3-假设空间" class="headerlink" title="1.3 假设空间"></a>1.3 假设空间</h3><ul>
+<li>归纳 induction：从特殊到一般的泛化过程</li>
+<li>演绎 deduction：从一般到特殊的特化过程</li>
+<li>归纳学习 inductive learning：从样例中学习</li>
+<li>版本空间 version space：存在着一个与训练集一致的“假设集合”</li>
+</ul>
+<h3 id="1-4-归纳偏好"><a href="#1-4-归纳偏好" class="headerlink" title="1.4 归纳偏好"></a>1.4 归纳偏好</h3><ul>
+<li>归纳偏好 inductive bias：机器学习算法在学习过程中对某种类型假设的偏好</li>
+<li>奥卡姆剃刀原则</li>
+<li>NFL定理 No Free Lunch Theorem</li>
+</ul>
+<h3 id="1-5-发展历程"><a href="#1-5-发展历程" class="headerlink" title="1.5 发展历程"></a>1.5 发展历程</h3><ul>
+<li>20世纪八十年代，符号主义学习，其中包括决策树和基于逻辑的学习</li>
+<li>20世纪九十年代中期以前，另一主流技术是基于神经网络的连接主义学习</li>
+<li>20世纪九十年代中期，统计学习，支持向量机Support Vector Machine SVM和kernel methods</li>
+<li>21世纪初，深度学习，卷积神经网络</li>
+</ul>
+<h3 id="1-6-应用现状"><a href="#1-6-应用现状" class="headerlink" title="1.6 应用现状"></a>1.6 应用现状</h3><h3 id="1-7-阅读材料"><a href="#1-7-阅读材料" class="headerlink" title="1.7 阅读材料"></a>1.7 阅读材料</h3><p>李航 统计学习方法</p>
+<h2 id="第-2-章-模型评估与选择"><a href="#第-2-章-模型评估与选择" class="headerlink" title="第 2 章 模型评估与选择"></a>第 2 章 模型评估与选择</h2><h3 id="2-1-经验误差与过拟合"><a href="#2-1-经验误差与过拟合" class="headerlink" title="2.1 经验误差与过拟合"></a>2.1 经验误差与过拟合</h3><ul>
+<li>错误率：分类错误的样本数占样本总数的比例</li>
+<li>精度：1-错误率</li>
+<li>误差：学习器的实际预测输出与样本的真实输出之间的差异</li>
+<li>训练误差/经验误差：学习器在训练集上的误差</li>
+<li>泛化误差：在新样本上的误差</li>
+<li>过拟合 overfitting：学习器将训练样本的一些特点当做了所有潜在样本都有的一般性质</li>
+<li>欠拟合 underfitting：对训练样本的一般性质都没学好</li>
+<li>模型选择问题</li>
+</ul>
+<h3 id="2-2-评估方法"><a href="#2-2-评估方法" class="headerlink" title="2.2 评估方法"></a>2.2 评估方法</h3><p>通过实验测试来对学习器的泛化误差进行评估并进而做出选择</p>
+<p>使用测试集来测试学习器对新样本的判别能力，以测试集上的测试误差作为泛化误差的近似。</p>
+<p>通过对包含m个样例的数据集D进行适当的处理产生训练集S和测试集T</p>
+<h4 id="2-2-1-留出法"><a href="#2-2-1-留出法" class="headerlink" title="2.2.1 留出法"></a>2.2.1 留出法</h4><p>将数据集D划分为两个互斥的集合，一个作为训练集S，一个作为测试集T</p>
+<p>训练/测试集的划分需要保持数据分布的一致性，避免数据划分带来的偏差</p>
+<p>常见做法以2/3~4/5的样本用于训练，剩余样本用于测试</p>
+<h4 id="2-2-2-交叉验证法"><a href="#2-2-2-交叉验证法" class="headerlink" title="2.2.2 交叉验证法"></a>2.2.2 交叉验证法</h4><p>将D划分为k个分层采样得到的大小近似的集合Di，将其中的某个Di定为测试集，其他的均为训练集，可以得到k次训练和测试，返回k个测试结果的均值，又称为“k折交叉验证”</p>
+<p>k最常用的取值是10</p>
+<p>由于将数据集D划分为k个子集存在多种划分方式，为减少因样本划分不同的差别，可以随机使用不同的划分重复p次，称为p次k折交叉验证，最常见的有10次10折交叉验证</p>
+<p>留一法 Leave-One-Out LOO：当D包含m个样本时，令k=m，则需要进行m次训练，比较准确但是计算开销过大</p>
+<h4 id="2-2-3-自助法"><a href="#2-2-3-自助法" class="headerlink" title="2.2.3 自助法"></a>2.2.3 自助法</h4><p>自助法 bootstrapping</p>
+<p>以自助采样为基础，从含m个样本的D中取出1个样本再将其放回，取m次，就得到了含有m个样本的数据集D’，某个样本在m次采样中始终不会被采到的概率为e 即0.368</p>
+<p>以D’作训练集，D\D’为测试集，这样仍有数据总量约1/3的没在D’中出现的样本用于测试，结果称为包外估计 out-of-bag estimate</p>
+<p>自助法在数据集较小难以划分测试集和训练集时较有用，但是会改变原本数据集的分布，带来估计偏差，故在数据集较大的情况下还是常用留出法和交叉验证法</p>
+<h4 id="2-2-4-调参与最终模型"><a href="#2-2-4-调参与最终模型" class="headerlink" title="2.2.4 调参与最终模型"></a>2.2.4 调参与最终模型</h4><p>调参 parameter tuning</p>
+<p>当进行模型评估和学习中，不仅要对适用学习算法进行选择，还需要设定算法参数</p>
+<p>为了区分，模型评估和选择中用于评估测试的数据集称为“验证集”</p>
+<p>在研究对比不同算法的泛化性能时，我们用测试集上的判别效果来估计模型实际使用的泛化能力，将训练数据分为训练集和验证集，基于验证集上的性能进行模型选择和调参</p>
+<h3 id="2-3-性能度量"><a href="#2-3-性能度量" class="headerlink" title="2.3 性能度量"></a>2.3 性能度量</h3><ul>
+<li>性能度量 performance measure：衡量模型泛化能力的评价标准</li>
+</ul>
+<h4 id="2-3-1-错误率-精度"><a href="#2-3-1-错误率-精度" class="headerlink" title="2.3.1 错误率 精度"></a>2.3.1 错误率 精度</h4><h4 id="2-3-2-查准率、查全率与F1"><a href="#2-3-2-查准率、查全率与F1" class="headerlink" title="2.3.2 查准率、查全率与F1"></a>2.3.2 查准率、查全率与F1</h4><p>以信息检索为例子，查准率代表“检索出的信息中用户感兴趣的信息比例”，如邮件系统的垃圾箱和商品推荐，查全率代表“用户感兴趣的信息有多少被检索出来了”，如逃犯信息检索或灾害预测经常用到</p>
+<p>查准率和查全率是矛盾的，一高一低。参考在一堆西瓜中挑好瓜。</p>
+<p>P-R图，以查全率为横轴，以查准率为纵轴，按从正例可能性从大到小对每个样本作为正例来预测</p>
+<p>书上的PR图仅作示意效果，有一点不太准确，如何理解这个图呢？</p>
+<p>第一次预测时，预测最有可能的样本为正例，其余m-1个样本均预测为反例，此时大概率有P=1/1，但是也有可能出现最有可能的样本被误判的情况，所以并不是一定从1起始。R=1/1+FN，接近是从0开始产生0</p>
+<p>第k次预测时，预测k个样本为正例，m-k个反例，P=TP/k，R=TP/(TP+FN)，很明显当k=m时，FN=0，R=1，P=TP/m并不一定为0</p>
+<p>PR图上的点越往右上角靠，性能越好</p>
+<p>如果拿python自己跑一下这个图能理解得更直观深刻</p>
+<p>查准率、查全率的性能度量有两种方法</p>
+<ul>
+<li><p>BEP度量：比较两者相等时的取值</p>
+</li>
+<li><p>F1度量： $$F1=\frac{2TP}{样例总数+TP-TN}$$</p>
+<p>​</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/17/study/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Queel's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/17/study/" itemprop="url">第3讲 一元函数微分学的概念与计算</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-17T23:56:01+08:00">
+                2018-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%80%83%E7%A0%94/" itemprop="url" rel="index">
+                    <span itemprop="name">考研</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                   字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                   分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>这一讲算是微积分里的重要基础，学习时长为4个小时。</p>
+<h1 id="导数与微分的概念"><a href="#导数与微分的概念" class="headerlink" title="导数与微分的概念"></a>导数与微分的概念</h1><p>$$\lim_{△x \to 0}{f(x+△x)-f(x)}{\(\Delta\)x}$$</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/07/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Queel's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/07/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93/" itemprop="url">JS数据类型总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T18:17:26+08:00">
+                2018-02-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                   字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                   分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="JS数据类型总结"><a href="#JS数据类型总结" class="headerlink" title="JS数据类型总结"></a>JS数据类型总结</h1><h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>JS中有5种基本数据类型（简单数据类型）</p>
+<ul>
+<li>Null</li>
+<li>Undefined</li>
+<li>String</li>
+<li>Number</li>
+<li>Boolean</li>
+</ul>
+<p>1种引用数据类型（复杂数据类型）</p>
+<ul>
+<li>Object</li>
+</ul>
+<p>ES6引入了一种新的原始数据类型</p>
+<ul>
+<li>Symbol</li>
+</ul>
+<p>或者如此区分，6种原始值，3种引用类型（对象、数组、函数）</p>
+<p>基本类型值在内存中占据固定大小的空间，因此被保存在栈内存中</p>
+<p>基本类型是没有属性和方法的，但仍然可以使用对象才有的属性方法。这时因为在对基本类型使用属性方法的时候，后台会隐式的创建这个基本类型的对象，之后再销毁这个对象</p>
+<p>引用类型的值是对象，保存在堆内存中，</p>
+<p>引用类型的值是保存在内存中的对象。JS不允许直接访问内存中的位置，不能直接操作对象的内存空间，操作对象时实际是在操作对象的引用。</p>
+<h3 id="二、变量类型检测"><a href="#二、变量类型检测" class="headerlink" title="二、变量类型检测"></a>二、变量类型检测</h3><h4 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h4><ol>
+<li><p>语法</p>
+<p>typeof xx 或 typeof(xx)</p>
+</li>
+<li><p>实例测试</p>
+</li>
+</ol>
+<p>​       typeof   2      输出   number<br>       typeof   null   输出   object</p>
+<p>​       特殊值null被认为是一个空的对象引用</p>
+<p>​       typeof   {}    输出   object</p>
+<p>​       typeof    []    输出   object</p>
+<p>​       typeof   (function(){})   输出  function</p>
+<p>​       typeof    undefined         输出  undefined</p>
+<p>​       typeof   ‘222’                  输出    string</p>
+<p>​       typeof  true                   输出     boolean</p>
+<ul>
+<li><p>为什么typeof要区分函数和对象?</p>
+<p>红宝书原话：</p>
+<blockquote>
+<p>从技术角度讲，函数在ECMAScript中是对象，不是一种数据类型。然而，函数也确实有一些特殊的属性，因此通过typeof操作符来区分函数和其他对象是有必要的。</p>
+</blockquote>
+</li>
+<li><p>typeof有什么缺陷？</p>
+<ol>
+<li>不能区分对象、数组、正则，对它们操作都返回”object”；</li>
+<li>Safar5,Chrome7之前的版本对正则对象返回 ‘function’</li>
+<li>在IE6,7和8中，大多数的宿主对象是对象，而不是函数；如：typeof alert; //object</li>
+<li>而在非ID浏览器或则IE9以上（包含IE9），typeof alert; //function</li>
+</ol>
+</li>
+</ul>
+<h4 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h4><ol>
+<li><p>语法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = variable <span class="keyword">instanceof</span> <span class="title">constructor</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>原理</p>
+<p>判断一个对象与构造函数是否在一个原型链上</p>
+</li>
+</ol>
+<h4 id="实现一个类型判断函数"><a href="#实现一个类型判断函数" class="headerlink" title="实现一个类型判断函数"></a>实现一个类型判断函数</h4><ol>
+<li><p>判断null</p>
+</li>
+<li><p>判断基础类型</p>
+</li>
+<li><p>使用Object.prototype.toString.call(target)判断引用类型</p>
+<p>注意： 一定是使用<code>call</code>来调用，不然是判断的Object.prototype的类型 之所以要先判断是否为基本类型是因为：虽然<code>Object.prototype.toString.call()</code>能判断出某值是：number/string/boolean，但是其实在包装的时候是把他们先转成了对象然后再判断类型的。 但是JS中包装类型和原始类型还是有差别的，因为对一个包装类型来说，typeof的值是object</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 类型判断</span><br><span class="line"> *&#x2F;</span><br><span class="line">function getType(target) &#123;</span><br><span class="line">  &#x2F;&#x2F;先处理最特殊的Null</span><br><span class="line">  if(target &#x3D;&#x3D;&#x3D; null) &#123;</span><br><span class="line">    return &#39;null&#39;;</span><br><span class="line">  &#125;</span><br><span class="line">  &#x2F;&#x2F;判断是不是基础类型</span><br><span class="line">  const typeOfT &#x3D; typeof target</span><br><span class="line">  if(typeOfT !&#x3D;&#x3D; &#39;object&#39;) &#123;</span><br><span class="line">    return typeOfT;</span><br><span class="line">  &#125;</span><br><span class="line">  &#x2F;&#x2F;肯定是引用类型了</span><br><span class="line">  const template &#x3D; &#123;</span><br><span class="line">    &quot;[object Object]&quot;: &quot;object&quot;,</span><br><span class="line">    &quot;[object Array]&quot; : &quot;array&quot;,</span><br><span class="line">    &quot;[object Function]&quot;: &quot;function&quot;,</span><br><span class="line">    &#x2F;&#x2F; 一些包装类型</span><br><span class="line">    &quot;[object String]&quot;: &quot;object - string&quot;,</span><br><span class="line">    &quot;[object Number]&quot;: &quot;object - number&quot;,</span><br><span class="line">    &quot;[object Boolean]&quot;: &quot;object - boolean&quot;</span><br><span class="line">  &#125;;</span><br><span class="line">  const typeStr &#x3D; Object.prototype.toString.call(target);</span><br><span class="line">  return template[typeStr];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="三、类型转换"><a href="#三、类型转换" class="headerlink" title="三、类型转换"></a>三、类型转换</h3><h4 id="显式转换"><a href="#显式转换" class="headerlink" title="显式转换"></a>显式转换</h4><p>通过手动进行类型转换，Javascript提供了以下转型函数：</p>
+<ol>
+<li>转换为数值类型：Number(mix)、parseInt(string,radix)、parseFloat(string)</li>
+<li>转换为字符串类型：toString(radix)、String(mix)</li>
+<li>转换为布尔类型：Boolean(mix)</li>
+</ol>
+<h4 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h4><p>主要参考操作符转换</p>
+<h4 id="转Boolean"><a href="#转Boolean" class="headerlink" title="转Boolean"></a>转Boolean</h4><p>以下都为假值，其他所有值都转为 true，包括所有对象（空对象，空数组也转为真）。</p>
+<ul>
+<li>false</li>
+<li>undfined</li>
+<li>null</li>
+<li>‘’</li>
+<li>NaN</li>
+<li>0</li>
+<li>-0</li>
+</ul>
+<h4 id="对象转基本类型"><a href="#对象转基本类型" class="headerlink" title="对象转基本类型"></a>对象转基本类型</h4><p>对象在转换基本类型时，会调用<code>valueOf</code>， 需要转成字符类型时调用<code>toString</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var a &#x3D; &#123;</span><br><span class="line">  valueOf() &#123;</span><br><span class="line">    return 0;</span><br><span class="line">  &#125;,</span><br><span class="line">  toString() &#123;</span><br><span class="line">    return &#39;1&#39;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">1 + a           &#x2F;&#x2F; 1</span><br><span class="line">&#39;1&#39;.concat(a)   &#x2F;&#x2F;&quot;11&quot;</span><br></pre></td></tr></table></figure>
+
+<p>运算中其中一方为字符串，那么就会把另一方也转换为字符串 如果一方不是字符串或者数字，那么会将它转换为数字或者字符串</p>
+<p>只有＋会先考虑字符串拼接，其他运算符会优先转换成数字</p>
+<p>还需要注意这个表达式<code>&#39;a&#39; + + &#39;b&#39;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#39;a&#39; + + &#39;b&#39; &#x2F;&#x2F; -&gt; &quot;aNaN&quot;</span><br></pre></td></tr></table></figure>
+
+<p>因为 + ‘b’ 等于 NaN，所以结果为 “aNaN”，你可能也会在一些代码中看到过 + ‘1’ 的形式来快速获取 number 类型。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a &#x3D; &#123;&#125;;</span><br><span class="line">a &#x3D;&#x3D; true &#x2F;&#x2F; -&gt; ?</span><br><span class="line">a &#x3D;&#x3D; false &#x2F;&#x2F; -&gt; ?</span><br></pre></td></tr></table></figure>
+
+<p> 因为 a.toString() -&gt; ‘[object Object]’ -&gt; NaN</p>
+<h4 id="操作符"><a href="#操作符" class="headerlink" title="== 操作符"></a>== 操作符</h4><p>对于 == 来说，如果对比双方的类型不一样的话，就会进行类型转换</p>
+<p>判断流程：</p>
+<ol>
+<li>首先会判断两者类型是否相同。相同的话就是比大小了</li>
+<li>类型不相同的话，那么就会进行类型转换</li>
+<li>会先判断是否在对比 null 和 undefined，是的话就会返回 true</li>
+<li>判断两者类型是否为 string 和 number，是的话就会将字符串转换为 number</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 &#x3D;&#x3D; &#39;1&#39;</span><br><span class="line">      ↓</span><br><span class="line">1 &#x3D;&#x3D;  1</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>判断其中一方是否为 boolean，是的话就会把 boolean 转为 number 再进行判断</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#39;1&#39; &#x3D;&#x3D; true</span><br><span class="line">        ↓</span><br><span class="line">&#39;1&#39; &#x3D;&#x3D;  1</span><br><span class="line">        ↓</span><br><span class="line"> 1  &#x3D;&#x3D;  1</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>判断其中一方是否为 object 且另一方为 string、number 或者 symbol，是的话就会把 object 转为原始类型再进行判断</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#39;1&#39; &#x3D;&#x3D; &#123; a: &#39;b&#39; &#125;</span><br><span class="line">        ↓</span><br><span class="line">&#39;1&#39; &#x3D;&#x3D; &#39;[object Object]&#39;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>两边都是对象的话，那么只要不是同一对象的不同引用，都为false</li>
+</ol>
+<p>注意，只要出现NaN，就一定是false，因为就连NaN自己都不等于NaN 对于NaN，判断的方法是使用全局函数 <code>isNaN()</code></p>
+<h4 id="操作符-1"><a href="#操作符-1" class="headerlink" title="=== 操作符"></a>=== 操作符</h4><p>不转类型，直接判断类型和值是否相同。但是 NaN === NaN 还是false</p>
+<h4 id="Object-prototype-toString"><a href="#Object-prototype-toString" class="headerlink" title="Object.prototype.toString"></a>Object.prototype.toString</h4><p>如果是原始类型，他会将原始类型包装为引用类型，然后调用对应方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function dd()&#123;&#125;</span><br><span class="line">var toString &#x3D; Object.prototype.toString;</span><br><span class="line">toString.call(dd);          &#x2F;&#x2F;[object Function]</span><br><span class="line">toString.call(new Object);  &#x2F;&#x2F;[object Object]</span><br><span class="line">toString.call(new Array);   &#x2F;&#x2F;[object Array]</span><br><span class="line">toString.call(new Date);    &#x2F;&#x2F;[object Date]</span><br><span class="line">toString.call(new String);  &#x2F;&#x2F;[object String]</span><br><span class="line">toString.call(Math);        &#x2F;&#x2F;[object Math]</span><br><span class="line">toString.call(undefined);   &#x2F;&#x2F;[object Undefined]</span><br><span class="line">toString.call(null);        &#x2F;&#x2F;[object Null]</span><br><span class="line">toString.call(123)          &#x2F;&#x2F;[object Number]</span><br><span class="line">toString.call(&#39;abc&#39;)        &#x2F;&#x2F;[object String]</span><br></pre></td></tr></table></figure>
+
+<h4 id="obj-toString-和Object-prototype-toString-call-obj"><a href="#obj-toString-和Object-prototype-toString-call-obj" class="headerlink" title="obj.toString() 和Object.prototype.toString.call(obj)"></a>obj.toString() 和Object.prototype.toString.call(obj)</h4><p>同样是检测对象obj调用toString方法，obj.toString()的结果和Object.prototype.toString.call(obj)的结果不一样，这是为什么？</p>
+<p>这是因为toString为Object的原型方法，而Array ，function等类型作为Object的实例，都重写了toString方法。不同的对象类型调用toString方法时，根据原型链的知识，调用的是对应的重写之后的toString方法（function类型返回内容为函数体的字符串，Array类型返回元素组成的字符串…..），而不会去调用Object上原型toString方法（返回对象的具体类型），所以采用obj.toString()不能得到其对象类型，只能将obj转换为字符串类型；因此，在想要得到对象的具体类型时，应该调用Object上原型toString方法。</p>
+<h3 id="四、如何判断一个数据是不是Array"><a href="#四、如何判断一个数据是不是Array" class="headerlink" title="四、如何判断一个数据是不是Array"></a>四、如何判断一个数据是不是Array</h3><ul>
+<li><pre><code>Array.isArray(obj)
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - ECMAScript 5种的函数，当使用ie8的时候就会出现问题。</span><br><span class="line"></span><br><span class="line">- &#96;&#96;&#96;</span><br><span class="line">  obj instanceof Array</span><br></pre></td></tr></table></figure>
+
+- 当用来检测在不同的window或iframe里构造的数组时会失败。这是因为每一个iframe都有它自己的执行环境，彼此之间并不共享原型链，所以此时的判断一个对象是否为数组就会失败。此时我们有一个更好的方式去判断一个对象是否为数组。</code></pre>
+</li>
+<li><pre><code>Object.prototype.toString.call(obj) == &#39;[object Array]&#39;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 这个方法比较靠谱</span><br><span class="line"></span><br><span class="line">- &#96;&#96;&#96;</span><br><span class="line">  obj.constructor &#x3D;&#x3D;&#x3D; Array</span><br></pre></td></tr></table></figure>
+
+- constructor属性返回对创建此对象的函数的引用
+</code></pre>
+</li>
+</ul>
+<p>分享内容：推荐大家一个靠谱的论文检测平台。重复的部分有详细出处以及具体修改意见，能直接在文章上做修改，全部改完一键下载就搞定了。怕麻烦的话，还能用它自带的降重功能。哦对了，他们现在正在做毕业季活动， 赠送很多免费字数，可以说是十分划算了！地址是：<a target="_blank" rel="noopener" href="http://www.paperpass.com/">http://www.paperpass.com/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/22/Semantic/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Queel's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/22/Semantic/" itemprop="url">Semantic</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-22T22:46:43+08:00">
+                2017-10-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                   字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                   分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="HTML语义化之我见"><a href="#HTML语义化之我见" class="headerlink" title="HTML语义化之我见"></a>HTML语义化之我见</h1><h3 id="写作背景"><a href="#写作背景" class="headerlink" title="写作背景"></a>写作背景</h3><p>在北邮人论坛里看到前端方向的招聘里经常有这么一条要求：理解HTML语义化。对此有一些疑问，在知乎和博客里看了一些对HTML语义化的解读，在此做一个总结。</p>
+<h3 id="什么是HTML语义化"><a href="#什么是HTML语义化" class="headerlink" title="什么是HTML语义化"></a>什么是HTML语义化</h3><p>语义化的含义就是用正确的标签做正确的事情，html语义化就是让页面的内容结构化，便于对浏览器、搜索引擎解析；在没有样式CCS情况下也以一种文档格式显示，并且是容易阅读的。搜索引擎的爬虫依赖于标记来确定上下文和各个关键字的权重，利于 SEO。使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。通俗易懂地说就是对人说人话，对鬼说鬼话。</p>
+<h3 id="为什么需要HTML语义化"><a href="#为什么需要HTML语义化" class="headerlink" title="为什么需要HTML语义化"></a>为什么需要HTML语义化</h3><p>相比先前网页开发过程中仅关注布局和功能，在开发过程中使用表格布局或DIV+CSS布局，越来越多的人关注HTML语义化，核心是语义化可以带来显而易见的好处：</p>
+<ul>
+<li><p>清晰的页面结构。去掉或样式丢失的时候,也能让页面呈现清晰的结构，增强页面的可读性。</p>
+</li>
+<li><p>支持更多的设备。屏幕阅读器会完全根据你的标记来“读”你的网页。更好的支持浏览器的阅读模式等。</p>
+</li>
+<li><p>有利于SEO。和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息，搜索引擎的爬虫也依赖于标记来确定上下文和各个关键字的权重。</p>
+</li>
+<li><p>便于团队开发和维护。在团队中大家都遵循同一个标准，可以减少很多差异化的东西，方便开发和维护，提高开发效率，甚至实现模块化开发。</p>
+</li>
+</ul>
+<h3 id="如何正确地实现HTML语义化"><a href="#如何正确地实现HTML语义化" class="headerlink" title="如何正确地实现HTML语义化"></a>如何正确地实现HTML语义化</h3><ol>
+<li><p>首先需要理解各个标签的含义即各个标签应用的场景</p>
+<p>此处参阅最底下参考资料的链接</p>
+</li>
+<li><p>CSS命名规范（刚入门的时候经常随意起只有自己看得懂的命名，规范的命名会使项目合作者接手时比较顺利）</p>
+<ul>
+<li>头：header</li>
+<li>内容：content .container</li>
+<li>尾：footer</li>
+<li>导航：nav</li>
+<li>侧栏：sidebar</li>
+<li>栏目：column</li>
+<li>页面外围布局：wrapper</li>
+<li>左右中：left right center</li>
+<li>登录条：loginbar</li>
+<li>标志：logo</li>
+<li>广告：banner</li>
+<li>页面主体：main</li>
+<li>热点：hot</li>
+<li>新闻：news</li>
+<li>下载：download</li>
+<li>子导航：subnav</li>
+<li>菜单：menu</li>
+<li>子菜单：submenu</li>
+<li>搜索：search</li>
+<li>友情链接：friendlink</li>
+<li>页脚：footer</li>
+<li>版权：copyright</li>
+<li>滚动：scroll</li>
+<li>内容：content</li>
+<li>标签页：tab</li>
+<li>文章列表：list</li>
+<li>提示信息：msg</li>
+<li>小技巧：tips</li>
+<li>栏目标题：title</li>
+<li>加入：joinus</li>
+<li>指南：guild</li>
+<li>服务：service</li>
+<li>注册：regsiter</li>
+<li>状态：status</li>
+<li>投票：vote</li>
+<li>合作伙伴：partner</li>
+</ul>
+</li>
+<li><p>尽可能少的使用无语义的标签div和span；</p>
+</li>
+</ol>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
+<li><a target="_blank" rel="noopener" href="http://justineo.github.io/slideshows/semantic-html">http://justineo.github.io/slideshows/semantic-html</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/6bc1fc059b51">https://www.jianshu.com/p/6bc1fc059b51</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.biaodianfu.com/html-semantic.html">https://www.biaodianfu.com/html-semantic.html</a></li>
+<li><a target="_blank" rel="noopener" href="http://ximan.github.io/css-name/">http://ximan.github.io/css-name/</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/igoradamenko/awsm.css">https://github.com/igoradamenko/awsm.css</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/index.asp">http://www.w3school.com.cn/tags/index.asp</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/01/Juyoumianer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Queel's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/01/Juyoumianer/" itemprop="url">聚有面儿开发文档</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-01T22:01:16+08:00">
+                2017-10-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                   字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                   分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="聚有面儿开发文档"><a href="#聚有面儿开发文档" class="headerlink" title="聚有面儿开发文档"></a>聚有面儿开发文档</h1><p><a target="_blank" rel="noopener" href="https://github.com/wwx22666/Juyoumian">github项目地址</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.juyoumian.com/index/index.html">聚有面儿网站</a></p>
+<h3 id="一-配置环境"><a href="#一-配置环境" class="headerlink" title="一. 配置环境"></a>一. 配置环境</h3><ol>
+<li>前端环境:用到了jquery库 在文本编辑器VIM里直接开发</li>
+<li>前端开发语言:html,css,JavaScript</li>
+<li>后端环境:WAMP windows+apache+MySQL+PHP</li>
+<li>调试浏览器: Chrome  Firefox</li>
+</ol>
+<h3 id="二-各个文件及文件夹的作用"><a href="#二-各个文件及文件夹的作用" class="headerlink" title="二. 各个文件及文件夹的作用"></a>二. 各个文件及文件夹的作用</h3><h4 id="1-JuNet-父文件夹"><a href="#1-JuNet-父文件夹" class="headerlink" title="1. JuNet                       父文件夹"></a>1. JuNet                       父文件夹</h4><ol>
+<li>template            模板文件夹</li>
+<li>index                首页文件夹</li>
+<li>place                地点文件夹</li>
+<li>mall                商城文件夹</li>
+<li>easter_egg            彩蛋文件夹</li>
+<li>activity                    活动文件夹</li>
+<li>user center                    用户中心文件夹</li>
+<li>README.md                开发文档    </li>
+</ol>
+<h4 id="2-index-mall-place-activity-子文件夹"><a href="#2-index-mall-place-activity-子文件夹" class="headerlink" title="2. index mall place activity     子文件夹"></a>2. index mall place activity     子文件夹</h4><ol>
+<li>images                存放图片的文件夹</li>
+<li>scripts                    存放JavaScript文件的文件夹</li>
+<li>styles                存放css样式文件的文件夹</li>
+</ol>
+<h4 id="3-images-二级子文件夹"><a href="#3-images-二级子文件夹" class="headerlink" title="3. images                    二级子文件夹"></a>3. images                    二级子文件夹</h4><ul>
+<li>从psd从提取出来的图片 最好加一个标识名然后存放进来</li>
+</ul>
+<h4 id="4-scripts-二级子文件夹"><a href="#4-scripts-二级子文件夹" class="headerlink" title="4. scripts                二级子文件夹"></a>4. scripts                二级子文件夹</h4><ul>
+<li>x.js                        x为页面名</li>
+<li>activity.js                        活动的js文件</li>
+<li>global.js                            全局的js文件    //一般作用于整个网页 存在template文件夹中</li>
+<li>jquery-3.2.1.min.js        //用于解析jquery库 存在template文件夹中</li>
+</ul>
+<h4 id="5-styles-二级子文件夹"><a href="#5-styles-二级子文件夹" class="headerlink" title="5. styles                    二级子文件夹"></a>5. styles                    二级子文件夹</h4><ul>
+<li>color.css                    颜色样式        //尽量加入备注指明调了哪块的颜色</li>
+<li>font.css                            字体样式        //同上</li>
+<li>layout.css                    布局样式        //同上</li>
+<li>x.css                        x为页面名    //是上述三个css的集合</li>
+</ul>
+<h3 id="三-浏览索引"><a href="#三-浏览索引" class="headerlink" title="三. 浏览索引"></a>三. 浏览索引</h3><h4 id="1-首页"><a href="#1-首页" class="headerlink" title="1. 首页"></a>1. 首页</h4><ul>
+<li>首页滚动图展示的是聚有面儿网站里带有的活动插图</li>
+<li>点击地点 彩蛋 文创 公告栏 分别跳转地点页 彩蛋页 商城页 活动页</li>
+</ul>
+<h4 id="2-导航栏"><a href="#2-导航栏" class="headerlink" title="2. 导航栏"></a>2. 导航栏</h4><ul>
+<li>点击聚有面儿的Logo可以直接跳转至首页</li>
+<li>点击地点、活动 、彩蛋 、商城导航栏分别跳转地点页、活动页、彩蛋页和商城页</li>
+<li>点击个人中心弹出登录注册窗口</li>
+</ul>
+<h4 id="3-地点页"><a href="#3-地点页" class="headerlink" title="3. 地点页"></a>3. 地点页</h4><ul>
+<li>目前支持北京市里的海淀区，朝阳区和西城区页面</li>
+<li>点击收藏按钮，星星变亮，若已收藏，点击后星星变暗</li>
+<li>地点页朝阳区中的红砖美术馆有三级页面，点击进入，其中有一个瀑布流布局</li>
+</ul>
+<h4 id="4-活动页"><a href="#4-活动页" class="headerlink" title="4. 活动页"></a>4. 活动页</h4><ul>
+<li>搜索框</li>
+<li>小米今日未来馆可点开，进入三级页面</li>
+</ul>
+<h4 id="5-彩蛋页"><a href="#5-彩蛋页" class="headerlink" title="5. 彩蛋页"></a>5. 彩蛋页</h4><ul>
+<li>点击西城区最左边的地标进入西城区地图</li>
+<li>进入下一级地图后点击左侧的三个地标进入沙燕风筝版2048，点击右侧四个地标进入糖葫芦版见缝插针</li>
+</ul>
+<h4 id="6-商城页"><a href="#6-商城页" class="headerlink" title="6. 商城页"></a>6. 商城页</h4><ul>
+<li>分为三个部分，文创页，图片页，音乐页</li>
+<li>文创页点击相应的图片会跳转至相应的淘宝购买链接</li>
+<li>图片页起到一个图片的展示效果</li>
+<li>音乐页有一个独立音乐播放按钮的内置音乐播放</li>
+</ul>
+<h3 id="四-开发日志"><a href="#四-开发日志" class="headerlink" title="四.开发日志"></a>四.开发日志</h3><h4 id="2017-09-01"><a href="#2017-09-01" class="headerlink" title="2017.09.01"></a>2017.09.01</h4><ol>
+<li>把一开始的网页HTML的代码改的工整了一点  参考了一下一本叫锋利的jquery的网页实例</li>
+<li>用CSS给导航栏加了一个阴影</li>
+<li>加了一些备注</li>
+<li>在global.js中用jquery框架里的一个接口写了一个垂直居中函数 然后把导航栏调成了垂直居中</li>
+</ol>
+<h4 id="2017-09-02"><a href="#2017-09-02" class="headerlink" title="2017.09.02"></a>2017.09.02</h4><ol>
+<li>将place.html基本实现</li>
+<li>问题主要在搜索下拉框样式的改变</li>
+</ol>
+<h4 id="2017-09-03"><a href="#2017-09-03" class="headerlink" title="2017.09.03"></a>2017.09.03</h4><ol>
+<li>修改了文件夹整体储存框架</li>
+<li>将导航栏的黑色背景问题解决了</li>
+</ol>
+<h4 id="2017-09-04"><a href="#2017-09-04" class="headerlink" title="2017.09.04"></a>2017.09.04</h4><ol>
+<li>将导航栏的黑色背景问题彻底解决，现在每次进入一个网页导航栏会维持已在此网页的提示</li>
+<li>将index.html基本实现 缺少滚动框图片的那部分内容与函数</li>
+<li>进行了字体的优化，字体优化作用于全局，在template/styles/font中加入了PingFangRegular 字体，并应用于index.html及各个页面的导航栏中</li>
+</ol>
+<h4 id="2017-09-05"><a href="#2017-09-05" class="headerlink" title="2017.09.05"></a>2017.09.05</h4><ul>
+<li>将place.html的下拉框样式做出了调整，place.html基本完成</li>
+</ul>
+<h4 id="2017-09-11"><a href="#2017-09-11" class="headerlink" title="2017.09.11"></a>2017.09.11</h4><ol>
+<li>将导航栏和底部以及滚动图设成了与浏览器宽度一样大</li>
+<li>改变了导航栏的颜色与字体</li>
+<li>将活动修改成彩蛋</li>
+<li>学习了一点关于JS淡入淡出的效果</li>
+<li>用jquery应该可以实现看大图的效果。</li>
+</ol>
+<h4 id="2017-09-12"><a href="#2017-09-12" class="headerlink" title="2017.09.12"></a>2017.09.12</h4><ol>
+<li>将导航栏与滚动图贴在了一起</li>
+<li>实现了点开大图的效果</li>
+<li>将商城图片mallPicture.html基本实现</li>
+<li>解决了导航版块中隔着小白线的bug</li>
+<li>现在鼠标移到购物车和个人中心的时候能正确地显示可点击了</li>
+</ol>
+<h4 id="2017-09-14"><a href="#2017-09-14" class="headerlink" title="2017.09.14"></a>2017.09.14</h4><ol>
+<li>彩蛋页的导航栏之所以与其他页的导航栏不同，由于彩蛋页无右侧滚动条栏</li>
+<li>增加了placeHaidian.html和placeXicheng.html</li>
+<li>修改了一些文字排版的样式</li>
+<li>将底部版权栏完成</li>
+<li>遇到一个没有解决的问题:网页的内容大小与视觉稿的大小出现一些差别,如果调整chrome的缩放比例可以解决问题</li>
+</ol>
+<h4 id="2017-09-16"><a href="#2017-09-16" class="headerlink" title="2017.09.16"></a>2017.09.16</h4><ol>
+<li>彩蛋页目前可以显示2048小游戏了</li>
+<li>活动页的小米图片可以正确地链接到小米详细的活动（三级页面）</li>
+<li>地点页的红砖美术馆可以正确链接到红砖美术馆的三级页面了</li>
+<li>首页的彩蛋目前会正确地显示了</li>
+<li>商城的图片页也能正确地显示了</li>
+<li>首页的滚动特效依旧没做出来</li>
+</ol>
+<h4 id="2017-09-17"><a href="#2017-09-17" class="headerlink" title="2017.09.17"></a>2017.09.17</h4><ol>
+<li>在template/styles/layout.css里修改了所有页面的底色 为#F4F4F4（灰色）</li>
+<li>活动页面、地点三级页和活动三级页的地图全屏并对齐框。</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/30/keyboard/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Queel's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/30/keyboard/" itemprop="url">keyboard</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-30T23:18:42+08:00">
+                2017-09-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index">
+                    <span itemprop="name">生活</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                   字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                   分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="不存在的"><a href="#不存在的" class="headerlink" title="不存在的"></a>不存在的</h1><p>一直以来就很想要一个机械键盘，美其名曰是为了提升编程效率，实际上是为了自我享受(雾)。其实本来是要等双十一再剁手的，刚性需求让我<br>忍不住还是提前败家了一回。<br>我自己对键盘的需求：<br>1.便于携带    这样回家带个键盘回去就不会很麻烦…104键的那种只能稳定放在寝室了<br>2.预算1000    有想过直接上HHKB静电容的 但是可能还是先试试机械键盘爽了再说<br>3.声音不能太响 这个需求影响到的是键盘轴的选择，青轴再见(挥手)<br>4.外形好看    难看的键盘敲起来心情也不会太好<br>在一周内，没事就逛逛机械键盘吧，看了一些评测贴与推荐贴，脑子一热就上了大F(filco)的minila，<br>不得不说我其实是有点想买的阿米洛(varmilo)的樱花粉的，仔细想了想要是买了估计这键盘<br>大F的双FN键简直强无敌    </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
-  {% include '_partials/pagination.swig' %}
-{% endblock %}
+  
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/wwx22666" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-globe"></i>
+                菊苣们
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.anotherhome.net/" title="DIYgod" target="_blank">DIYgod</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.lwl12.com/" title="liwanglin12" target="_blank">liwanglin12</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+	</div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-leaf"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Queel</span>
+
+  
+</div>
+
+
+<!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>-->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/heart.js"></script>
+</html>
