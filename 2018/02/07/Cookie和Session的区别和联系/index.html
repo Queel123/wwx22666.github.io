@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="高等数学,考研," />
+  <meta name="keywords" content="HTTP," />
 
 
 
@@ -88,18 +88,17 @@
 
 
 
-<meta name="description" content="这一讲算是微积分里的重要基础，学习时长为4个小时。 导数与微分的概念$$\lim_{△x \to 0}{f(x+△x)-f(x)}{\(\Delta\)x}$$">
+<meta name="description" content="Cookie和Session 详解 Cookie和Session出现的原因   http协议是无状态的，服务器无法确定这次的请求和上次的请求是否来自同一个客户端。利用Session和Cookie可以让服务器知道不同的请求是否来自同一个客户端   Cookie的定义   Cookie是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器之后向同一服务器再次发起请求时被携带上，用于告知服务端两">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第3讲 一元函数微分学的概念与计算">
-<meta property="og:url" content="http://yoursite.com/2018/05/17/study/index.html">
+<meta property="og:title" content="Cookie和Session 详解">
+<meta property="og:url" content="http://yoursite.com/2018/02/07/Cookie%E5%92%8CSession%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB/index.html">
 <meta property="og:site_name" content="Queel&#39;s blog">
-<meta property="og:description" content="这一讲算是微积分里的重要基础，学习时长为4个小时。 导数与微分的概念$$\lim_{△x \to 0}{f(x+△x)-f(x)}{\(\Delta\)x}$$">
+<meta property="og:description" content="Cookie和Session 详解 Cookie和Session出现的原因   http协议是无状态的，服务器无法确定这次的请求和上次的请求是否来自同一个客户端。利用Session和Cookie可以让服务器知道不同的请求是否来自同一个客户端   Cookie的定义   Cookie是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器之后向同一服务器再次发起请求时被携带上，用于告知服务端两">
 <meta property="og:locale">
-<meta property="article:published_time" content="2018-05-17T15:56:01.000Z">
-<meta property="article:modified_time" content="2018-05-17T16:29:54.000Z">
+<meta property="article:published_time" content="2018-02-07T10:17:26.000Z">
+<meta property="article:modified_time" content="2020-11-30T01:15:59.290Z">
 <meta property="article:author" content="Queel">
-<meta property="article:tag" content="高等数学">
-<meta property="article:tag" content="考研">
+<meta property="article:tag" content="HTTP">
 <meta name="twitter:card" content="summary">
 
 
@@ -130,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/17/study/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/07/Cookie和Session的区别和联系/"/>
 
 
 
 
 
-  <title>第3讲 一元函数微分学的概念与计算 | Queel's blog</title>
+  <title>Cookie和Session 详解 | Queel's blog</title>
   
 
 
@@ -297,7 +296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/17/study/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/07/Cookie%E5%92%8CSession%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -314,7 +313,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">第3讲 一元函数微分学的概念与计算</h1>
+          <h1 class="post-title" itemprop="name headline">Cookie和Session 详解</h1>
         
 
         <div class="post-meta">
@@ -326,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-17T23:56:01+08:00">
-                2018-05-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T18:17:26+08:00">
+                2018-02-07
               </time>
             
 
@@ -349,8 +348,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%80%83%E7%A0%94/" itemprop="url" rel="index">
-                    <span itemprop="name">考研</span>
+                  <a href="/categories/%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index">
+                    <span itemprop="name">网络</span>
                   </a>
                 </span>
 
@@ -380,7 +379,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  42 字
+                  1.1k 字
                 </span>
               
 
@@ -396,7 +395,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  3 分钟
                 </span>
               
             </div>
@@ -417,8 +416,78 @@
       
 
       
-        <p>这一讲算是微积分里的重要基础，学习时长为4个小时。</p>
-<h1 id="导数与微分的概念"><a href="#导数与微分的概念" class="headerlink" title="导数与微分的概念"></a>导数与微分的概念</h1><p>$$\lim_{△x \to 0}{f(x+△x)-f(x)}{\(\Delta\)x}$$</p>
+        <h1 id="Cookie和Session-详解"><a href="#Cookie和Session-详解" class="headerlink" title="Cookie和Session 详解"></a>Cookie和Session 详解</h1><ol>
+<li>Cookie和Session出现的原因</li>
+</ol>
+<ul>
+<li>http协议是无状态的，服务器无法确定这次的请求和上次的请求是否来自同一个客户端。利用Session和Cookie可以让服务器知道不同的请求是否来自同一个客户端</li>
+</ul>
+<ol start="2">
+<li>Cookie的定义</li>
+</ol>
+<ul>
+<li>Cookie是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器之后向同一服务器再次发起请求时被携带上，用于告知服务端两个请求是否来自同一个客户端。</li>
+</ul>
+<ol start="3">
+<li>Cookie的用途</li>
+</ol>
+<ul>
+<li>会话状态管理（如购物车，用户登录状态，游戏分数或者其他需要记录的信息）</li>
+<li>个性化设置（如用户自定义设置，主题等）</li>
+<li>浏览器行为跟踪（如跟踪分析用户行为等）</li>
+</ul>
+<ol start="4">
+<li>Cookie的创建过程</li>
+</ol>
+<ul>
+<li><p>服务器发送的响应报文包含Set-Cookie首部字段，客户端得到响应报文后把Cookie内容保存到浏览器中</p>
+</li>
+<li><p>客户端之后对同一个服务器发送请求时，会从浏览器中取出Cookie信息并通过Cookie请求首部字段发送给服务器。</p>
+</li>
+</ul>
+<ol start="5">
+<li>禁用cookie还可以使用session吗</li>
+</ol>
+<ul>
+<li>URL重写 将session id直接附加在URL路径后面</li>
+<li>表单隐藏字段，服务器自动修改表单，添加一个隐藏字段让表单提交时将session id传回服务器</li>
+</ul>
+<ol start="6">
+<li>Cookie分类</li>
+</ol>
+<ul>
+<li>会话期Cookie：浏览器关闭之后它会被自动删除，仅在会话期有效</li>
+<li>持久性Cookie：指定过期时间（EXpires）或有效期（max-age）之后就成为了持久性的Cookie</li>
+</ul>
+<ol start="7">
+<li>Secure</li>
+</ol>
+<p>标记为 Secure 的 Cookie 只能通过被 HTTPS 协议加密过的请求发送给服务端。但即便设置了 Secure 标记，敏感信息也不应该通过 Cookie 传输，因为 Cookie 有其固有的不安全性，Secure 标记也无法提供确实的安全保障。</p>
+<ol start="8">
+<li>Session</li>
+</ol>
+<p>除了可以将用户信息通过 Cookie 存储在用户浏览器中，也可以利用 Session 存储在服务器端，存储在服务器端的信息更加安全。</p>
+<p>Session 可以存储在服务器上的文件、数据库或者内存中。也可以将 Session 存储在 Redis 这种内存型数据库中，效率会更高。</p>
+<p>使用 Session 维护用户登录状态的过程如下：</p>
+<ul>
+<li>用户进行登录时，用户提交包含用户名和密码的表单，放入 HTTP 请求报文中；</li>
+<li>服务器验证该用户名和密码，如果正确则把用户信息存储到 Redis 中，它在 Redis 中的 Key 称为 Session ID；</li>
+<li>服务器返回的响应报文的 Set-Cookie 首部字段包含了这个 Session ID，客户端收到响应报文之后将该 Cookie 值存入浏览器中；</li>
+<li>客户端之后对同一个服务器进行请求时会包含该 Cookie 值，服务器收到之后提取出 Session ID，从 Redis 中取出用户信息，继续之前的业务操作。</li>
+</ul>
+<p>应该注意 Session ID 的安全性问题，不能让它被恶意攻击者轻易获取，那么就不能产生一个容易被猜到的 Session ID 值。此外，还需要经常重新生成 Session ID。在对安全性要求极高的场景下，例如转账等操作，除了使用 Session 管理用户状态之外，还需要对用户进行重新验证，比如重新输入密码，或者使用短信验证码等方式。</p>
+<ol start="9">
+<li>浏览器禁用 Cookie</li>
+</ol>
+<p>此时无法使用 Cookie 来保存用户信息，只能使用 Session。除此之外，不能再将 Session ID 存放到 Cookie 中，而是使用 URL 重写技术，将 Session ID 作为 URL 的参数进行传递。</p>
+<ol start="10">
+<li>Cookie 与 Session 选择</li>
+</ol>
+<ul>
+<li>Cookie 只能存储 ASCII 码字符串，而 Session 则可以存储任何类型的数据，因此在考虑数据复杂性时首选 Session；</li>
+<li>Cookie 存储在浏览器中，容易被恶意查看。如果非要将一些隐私数据存在 Cookie 中，可以将 Cookie 值进行加密，然后在服务器进行解密；</li>
+<li>对于大型网站，如果用户所有的信息都存储在 Session 中，那么开销是非常大的，因此不建议将所有的用户信息都存储到 Session 中。</li>
+</ul>
 
       
     </div>
@@ -436,9 +505,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 高等数学</a>
-          
-            <a href="/tags/%E8%80%83%E7%A0%94/" rel="tag"><i class="fa fa-tag"></i> 考研</a>
+            <a href="/tags/HTTP/" rel="tag"><i class="fa fa-tag"></i> HTTP</a>
           
         </div>
       
@@ -451,8 +518,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/07/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93/" rel="next" title="JS数据类型总结">
-                <i class="fa fa-chevron-left"></i> JS数据类型总结
+              <a href="/2017/12/02/javaFirst-md/" rel="next" title="javaFirst.md">
+                <i class="fa fa-chevron-left"></i> javaFirst.md
               </a>
             
           </div>
@@ -461,8 +528,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/30/MLlearning/" rel="prev" title="机器学习笔记">
-                机器学习笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/02/07/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93/" rel="prev" title="JS数据类型总结">
+                JS数据类型总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -636,7 +703,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%BE%AE%E5%88%86%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">导数与微分的概念</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Cookie%E5%92%8CSession-%E8%AF%A6%E8%A7%A3"><span class="nav-number">1.</span> <span class="nav-text">Cookie和Session 详解</span></a></li></ol></div>
             
 
           </div>
